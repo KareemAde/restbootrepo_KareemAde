@@ -63,6 +63,7 @@ public class TodosResource {
 	//         Note that id will be auto-generated 
 	//            in the Todos database table
 	// Accept: application/json
+	@RequestMapping(method = RequestMethod.POST, produces = { "application/json", "application/xml"  })
 	public Todo createTodo(@RequestBody Todo todo) {
 		Todo savedTodo = todoRepository.save(todo);
 		return savedTodo;
